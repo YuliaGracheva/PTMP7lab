@@ -1,0 +1,91 @@
+﻿@page
+@model lab7PPTPM.Pages.AuthorizationModel
+
+@{
+    Layout = null;
+}
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #93806F; /* Цвет страницы */
+            color: white; /* Цвет текста */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Центрируем по вертикали */
+        }
+
+        .container_login {
+            background-color: #DED4CA; /* Цвет контейнера */
+            padding: 20px;
+            border-radius: 8px; /* Скругление углов */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px; /* Скругление углов полей ввода */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #93806F; /* Цвет кнопки */
+            color: white; /* Цвет тексqта кнопки */
+            border: none;
+            border-radius: 4px; /* Скругление углов кнопки */
+            cursor: pointer; /* Курсор при наведении на кнопку */
+        }
+
+            button:hover {
+                background-color: #7a6b5a; /* Цвет кнопки при наведении */
+            }
+
+    </style>
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Вход</title>
+    </head>
+    <body>
+        <div class="container_login">
+            <h1>Суздальская православная гимназия</h1>
+            <h2>Вход для сотрудников</h2>
+            <form method="post">
+                <div class="input-group">
+                    <label for="username">Логин:</label>
+                <input type="text" id="username" name="username" autocomplete="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" autocomplete="password" required>
+                </div>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </body>
+    </html>
